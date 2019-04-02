@@ -36,6 +36,7 @@ class newUser extends Component {
     submitHandler(event){
         event.preventDefault()
         const newUser = this.props.newUser
+        console.log(newUser)
         this.props.post(newUser)
     }
 

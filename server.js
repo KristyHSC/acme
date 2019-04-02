@@ -18,8 +18,13 @@ app.get('/api/users', (req, res, next) => {
 })
 
 app.post('/api/users', (req, res, next) => {
-    User.create(req.body)
-        .catch(next)
+    const newUser = req.body
+    User.create(newUser)
+        .then(() => res.json(user))
+        .then(() => console.log('created!'))
+        .catch(error => console.log(error))
+    
 })
+
 
 app.listen(port, ()=> console.log(`listening on port ${port}`))

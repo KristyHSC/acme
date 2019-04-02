@@ -20,7 +20,7 @@ class Users extends Component {
     componentDidMount(){
         this.props.fetchUsers()
     }
-
+    
     render (){
         const users = this.props.users
         return (
@@ -30,6 +30,7 @@ class Users extends Component {
                     <ul>Name: {user.name}</ul>
                     <ul>Bio: {user.bio}</ul>
                     <ul>Ranked: {user.rank}</ul>
+                    <button>Delete</button>
                     </li>)}
             </div>
         )

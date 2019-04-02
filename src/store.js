@@ -5,7 +5,7 @@ import axios from 'axios'
 //initialState ********************************************
 const initialState = {
     Users: [],
-    newUser: []
+    newUser: {}
 }
 //Action type **************************************************
 const ADD_USER = 'ADD_USER'
